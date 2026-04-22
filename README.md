@@ -1,1 +1,6 @@
-# Crear-un-Dockerfile ![image](https://github.com/user-attachments/assets/7acb25f6-06a3-42d0-848b-568053a0372d)  ![image](https://github.com/user-attachments/assets/e9627195-c862-4415-98b8-9ff9a371d8bb)
+# Crear-un-Dockerfile ![image](https://github.com/user-attachments/assets/36778b56-2097-4319-86b0-09589c221780)  ![image](https://github.com/user-attachments/assets/7acb25f6-06a3-42d0-848b-568053a0372d)  ![image](https://github.com/user-attachments/assets/e9627195-c862-4415-98b8-9ff9a371d8bb)
+____________________________________________________________________________________________________________________________________________________________________________________________________________
+
+En este proyecto veremos como crear correctamente el archivo Dockerfile, cuidando detalles importantes como el nombre sin extensión y la estructura básica del código. A partir de ahí, trabajamos con una imagen basada en N8N, configurando el mantenedor, el puerto 5678 y el protocolo HTTP para que el contenedor quede listo para usarse. Luego construimos la imagen desde la terminal con el comando docker build, entendiendo qué significa cada parámetro como el uso de no cache, el nombre de la imagen y la versión 2.16.
+
+Después convertimos esa imagen en un contenedor en ejecución, exponiendo el puerto correspondiente y verificando que todo esté funcionando tanto desde la terminal como desde Docker Desktop. Finalmente, comprobamos que N8N está corriendo correctamente accediendo desde el navegador en localhost:5678.
