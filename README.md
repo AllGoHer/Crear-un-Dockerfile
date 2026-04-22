@@ -25,7 +25,7 @@ ENV N8N_PROTOCOL=http
 
 Donde: 
 •	FROM n8nio/n8n:latest -- # Está trayendo la última versión de n8n          
-•	LABEL maintainer="Allan <allangonzales1221@gmail.com”  -es la etiqueta de quien esta dando mantenimiento. Ahí deben cambiar los datos por su cuenta personal de correo electrónico.
+•	LABEL maintainer="Allan <allangonzales1221@gmail.com>”  -es la etiqueta de quien esta dando mantenimiento. Ahí deben cambiar los datos por su cuenta personal de correo electrónico.
 •	EXPOSE 5678  - va mostrar dentro del contenedor el puerto 5678 
 •	ENV N8N_HOST=0.0.0.0   -- cualquier IP se conecte lo va a recibir.
 •	ENV N8N_PORT=5678  --- el puerto que va tener n8n.
