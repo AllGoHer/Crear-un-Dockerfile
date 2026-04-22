@@ -53,8 +53,11 @@ Donde:
   	docker build --no-cache -t mi-n8n:2.16 .
   	
 •	Docker build  -- buid indica que va construir una imagen a partir de nuestro Dockerfile.
+
 •	--no-cache   -- que no use cache, haciendo más rápida la creación de la imagen.
+
 •	-t mi-n8n:   -- nombre de la imagen.
+
 •	2.16 .  -- indica la versión de n8n y, el puntito final despues de un espacio, indica que busque dentro de la carpeta que estamos trabajando el archivo dockerfile.
 
 ![image](https://github.com/user-attachments/assets/a1ae3c75-4c66-492b-b365-3091cefa2db6)
