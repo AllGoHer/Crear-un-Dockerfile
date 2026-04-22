@@ -92,10 +92,15 @@ También podemos verlo en Docker desktop con el nombre mi-n8n
 docker run -d --name n8n-server -p 5678:5678 -v n8n_data:/home/node/.n8n mi-n8n:1.0 
 
 6.1.	Docker -- voy a usar Docker para hacer algo.
+
 6.2.	Run -- Es la acción. Significa: "Toma una imagen (una plantilla) y créame un contenedor (una máquina virtual ligera) a partir de ella y enciéndelo".
+
 6.3.	-d --(Detached), Significa "Despegado" o en segundo plano.
+
 Qué hace: Si no pones esta bandera, el contenedor se apodera de tu terminal. Verás los logs (textos) del programa pasar a toda velocidad y no podrás escribir más comandos en esa ventana. Al poner -d, Docker lanza el contenedor y te devuelve el control de la terminal inmediatamente, dejando el programa corriendo silenciosamente de fondo.
+
 6.4.	--name n8n-server ---- Asignar un nombre personalizado.
+
 Qué hace: Por defecto, Docker le pone nombres aleatorios y graciosos a los contenedores (como sleepy_einstein o crazy_tesla). Si no le pones nombre, para detenerlo mañana tendrías que escribir un código largo feo (el ID del contenedor). Al poner --name n8n-server, te aseguras de que mañana puedas detenerlo fácilmente escribiendo: docker stop n8n-server.
 
 6.5.	-p 5678:5678 (Publish / Mapeo de Puertos)
@@ -108,17 +113,21 @@ El segundo 5678 (Derecha): Es el interior del contenedor. Le dice a Docker: "Lo 
 Resultado: Te permite abrir tu navegador en http://localhost:5678 y ver n8n. (Nota: Podrías hacerlo -p 8080:5678, y entonces entrarías por el 8080 en tu navegador).
 
 6.6.	-v n8n_data:/home/node/.n8n (Volume / Volumen)
+
 Esta es la bandera que salva vidas. Se lee como Nombre_Volumen : Ruta_Dentro_Contenedor.
 
 El problema que resuelve: Los contenedores son efímeros (temporales). Si creas un flujo de trabajo en n8n y luego borras el contenedor (o lo reinicias de cierta forma), pierdes todo tu trabajo. Los datos mueren con el contenedor.
+
 Qué hace: Crea una carpeta especial en tu computadora real llamada n8n_data y la "engancha" a la carpeta donde n8n guarda su configuración (/home/node/.n8n).
 
 Resultado: Todo lo que guardes en n8n se escribirá directamente en tu computadora real. Si el contenedor explota o lo borras, al volver a correr este comando, n8n leerá esa carpeta y todos tus flujos seguirán ahí intactos.
 
 6.7.	mi-n8n:2.16 (La Imagen)
+
 Es la "receta" que acabas de crear en tu pregunta anterior con el docker build.
 
 mi-n8n: El nombre de la imagen.
+
 :2.16: La etiqueta (versión). Le dice a Docker: "No uses la última versión que esté en internet, usa exactamente la versión 2.16 que yo acabo de compilar en mi computadora".
  
 ![image](https://github.com/user-attachments/assets/2f58ce01-2b61-479d-9e55-7d2f07e8bf1b)
